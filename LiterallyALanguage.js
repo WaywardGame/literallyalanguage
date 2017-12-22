@@ -1,5 +1,6 @@
 define(["require", "exports", "language/ILanguage", "language/Language", "mod/Mod", "Utilities"], function (require, exports, ILanguage_1, Language_1, Mod_1, Utilities) {
     "use strict";
+    Object.defineProperty(exports, "__esModule", { value: true });
     class LiterallyALanguage extends Mod_1.default {
         onInitialize() {
             const english = languageManager.getLanguage("English");
@@ -9,7 +10,7 @@ define(["require", "exports", "language/ILanguage", "language/Language", "mod/Mo
             this.language = new Language_1.default("Literally a Language");
             const dictionaries = Utilities.Enums.getValues(ILanguage_1.Dictionary);
             for (const dictionaryId of dictionaries) {
-                if (dictionaryId === ILanguage_1.Dictionary.Ui || dictionaryId === ILanguage_1.Dictionary.UiStatic) {
+                if (dictionaryId === ILanguage_1.Dictionary.Ui) {
                     continue;
                 }
                 const dictionary = english.getDictionary(dictionaryId);
@@ -48,7 +49,6 @@ define(["require", "exports", "language/ILanguage", "language/Language", "mod/Mo
             }
         }
     }
-    Object.defineProperty(exports, "__esModule", { value: true });
     exports.default = LiterallyALanguage;
 });
 //# sourceMappingURL=LiterallyALanguage.js.map

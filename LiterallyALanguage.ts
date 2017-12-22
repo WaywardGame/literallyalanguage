@@ -1,5 +1,5 @@
-import { ActionType, CreatureType, DoodadType, ItemType, ItemTypeGroup, SkillType, TerrainType } from "Enums";
-import { Dictionary, ILanguage, INameDescription, INameDescriptionArray } from "language/ILanguage";
+import { ActionType, CreatureType, DoodadType, ItemType, ItemTypeGroup, SkillType, TerrainType, IObjectDescription } from "Enums";
+import { Dictionary, ILanguage, ITranslation, ITranslationObject, ITranslationArray } from "language/ILanguage";
 import Language from "language/Language";
 import { Message } from "language/Messages";
 import Mod from "mod/Mod";
@@ -21,19 +21,19 @@ export default class LiterallyALanguage extends Mod {
 
 		const dictionaries = Utilities.Enums.getValues(Dictionary);
 		for (const dictionaryId of dictionaries) {
-			if (dictionaryId === Dictionary.Ui || dictionaryId === Dictionary.UiStatic) {
+			if (dictionaryId === Dictionary.Ui) {
 				continue;
 			}
 
 			const dictionary = english.getDictionary(dictionaryId);
-			const newDictionary: INameDescriptionArray = {};
+			const newDictionary: ITranslationArray = {};
 
 			const keys = Object.keys(dictionary);
 			for (const key of keys) {
 				const index = parseInt(key, 10);
-				const value = dictionary[index];
+				const value = dictionary[index] as ITranslationObject;
 				if (value) {
-					const definition: INameDescription = {
+					const definition: ITranslationObject = {
 						name: value.name,
 						description: value.description,
 						prefix: value.prefix,
