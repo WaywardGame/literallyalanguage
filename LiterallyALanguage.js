@@ -27,13 +27,13 @@ define(["require", "exports", "language/ILanguage", "language/Language", "mod/Mo
                             suffix: value.suffix
                         };
                         if (definition.name && dictionaryId !== ILanguage_1.Dictionary.Item) {
-                            definition.name = "Literally " + definition.name;
+                            definition.name = `Literally ${definition.name}`;
                         }
                         if (definition.description) {
-                            definition.description = "Literally " + definition.description;
+                            definition.description = `Literally ${definition.description}`;
                         }
                         if (definition.prefix) {
-                            definition.prefix = "Literally " + definition.prefix.toLowerCase();
+                            definition.prefix = `Literally ${definition.prefix.toLowerCase()}`;
                         }
                         newDictionary[index] = definition;
                     }

@@ -1,5 +1,5 @@
-import { ActionType, CreatureType, DoodadType, ItemType, ItemTypeGroup, SkillType, TerrainType, IObjectDescription } from "Enums";
-import { Dictionary, ILanguage, ITranslation, ITranslationObject, ITranslationArray } from "language/ILanguage";
+import { ActionType, CreatureType, DoodadType, IObjectDescription, ItemType, ItemTypeGroup, SkillType, TerrainType } from "Enums";
+import { Dictionary, ILanguage, ITranslation, ITranslationArray, ITranslationObject } from "language/ILanguage";
 import Language from "language/Language";
 import { Message } from "language/Messages";
 import Mod from "mod/Mod";
@@ -41,15 +41,15 @@ export default class LiterallyALanguage extends Mod {
 					};
 
 					if (definition.name && dictionaryId !== Dictionary.Item) {
-						definition.name = "Literally " + definition.name;
+						definition.name = `Literally ${definition.name}`;
 					}
 
 					if (definition.description) {
-						definition.description = "Literally " + definition.description;
+						definition.description = `Literally ${definition.description}`;
 					}
 
 					if (definition.prefix) {
-						definition.prefix = "Literally " + definition.prefix.toLowerCase();
+						definition.prefix = `Literally ${definition.prefix.toLowerCase()}`;
 					}
 
 					newDictionary[index] = definition;
