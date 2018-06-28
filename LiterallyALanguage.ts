@@ -1,12 +1,7 @@
-import { ActionType, CreatureType, DoodadType, IObjectDescription, ItemType, ItemTypeGroup, SkillType, TerrainType } from "Enums";
-import { Dictionary, ILanguage, ITranslation, ITranslationArray, ITranslationObject } from "language/ILanguage";
+import { Dictionary, ILanguage, ITranslationArray, ITranslationObject } from "language/ILanguage";
 import Language from "language/Language";
-import { Message } from "language/Messages";
 import Mod from "mod/Mod";
-import { MilestoneType } from "player/IMilestone";
-import { TileEventType } from "tile/ITileEvent";
-import { HintType } from "ui/IHint";
-import * as Utilities from "Utilities";
+import Enums from "utilities/enum/Enums";
 
 export default class LiterallyALanguage extends Mod {
 	private language: ILanguage | undefined;
@@ -19,7 +14,7 @@ export default class LiterallyALanguage extends Mod {
 
 		this.language = new Language("Literally a Language");
 
-		const dictionaries = Utilities.Enums.getValues(Dictionary);
+		const dictionaries = Enums.values(Dictionary);
 		for (const dictionaryId of dictionaries) {
 			if (dictionaryId === Dictionary.Ui) {
 				continue;
