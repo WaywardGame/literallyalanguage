@@ -7,5 +7,6 @@
 	"compatibleMinorVersions": [
 		6
 	],
-	"file": "LiterallyALanguage.js"
+	"file": "LiterallyALanguage.js",
+	"multiplayerClientside": true
 }
