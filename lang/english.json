@@ -1,0 +1,10 @@
+{
+	"extends": "English",
+	"pluralizationRules": {
+		"articleRules": [
+			[ 1, "/^(?=[aeiou])/", "literally an "],
+			[ 1, "/^(?![aeiou])/", "literally a "],
+			[ null, "/^/", "literally "]
+		]
+	}
+}

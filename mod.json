@@ -5,8 +5,9 @@
 	"author": "Spacetech",
 	"unloadable": true,
 	"compatibleMinorVersions": [
-		6
+		7
 	],
-	"file": "LiterallyALanguage.js",
-	"multiplayerClientside": true
+	"languages": [
+		"lang/english"
+	]
 }
