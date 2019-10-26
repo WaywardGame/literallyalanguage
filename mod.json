@@ -3,10 +3,6 @@
 	"description": "It's literally a language.",
 	"version": "1.0.0",
 	"author": "Spacetech",
-	"unloadable": true,
-	"compatibleMinorVersions": [
-		7
-	],
 	"languages": [
 		"lang/english"
 	]

@@ -7,5 +7,4 @@ Not currently available on Steam Workshop.
 ```
 git clone https://github.com/WaywardGame/literallyalanguage.git
 cd literallyalanguage
-git submodule update --init
 ```
