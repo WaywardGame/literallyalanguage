@@ -3,6 +3,7 @@
 	"description": "It's literally a language.",
 	"version": "1.0.0",
 	"author": "Spacetech",
+	"github": "https://github.com/WaywardGame/literallyalanguage",
 	"languages": [
 		"lang/english"
 	]
